@@ -12,7 +12,7 @@ app.use('/', createProxyMiddleware({
 }));
 
 app.use('/image/', createProxyMiddleware({ 
-  target: 'https://image.tmdb.org/t/p/w500',
+  target: 'https://image.tmdb.org',
   changeOrigin: true,
 }));
 
