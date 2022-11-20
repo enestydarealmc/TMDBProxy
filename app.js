@@ -11,7 +11,7 @@ app.use('/', createProxyMiddleware({
   changeOrigin: true,
 }));
 
-app.use('/image/', createProxyMiddleware({ 
+app.use('/image/*', createProxyMiddleware({ 
   target: 'https://image.tmdb.org',
   changeOrigin: true,
 }));
