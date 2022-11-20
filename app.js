@@ -6,10 +6,10 @@ const app = express();
 const { PORT = 8000 } = process.env;
 
 app.use(helmet());
-
-app.use('/image/', createProxyMiddleware({ 
-  target: 'https://image.tmdb.org',
+app.use('/', createProxyMiddleware({ 
+  target: 'https://api.themoviedb.org',
   changeOrigin: true,
 }));
+
 
 app.listen(PORT);
