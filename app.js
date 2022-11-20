@@ -6,7 +6,7 @@ const app = express();
 const { PORT = 8000 } = process.env;
 
 app.use(helmet());
-app.use('/', createProxyMiddleware({ 
+app.use('/root/*', createProxyMiddleware({ 
   target: 'https://api.themoviedb.org',
   changeOrigin: true,
 }));
