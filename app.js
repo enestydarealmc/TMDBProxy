@@ -10,4 +10,10 @@ app.use('/', createProxyMiddleware({
   target: 'https://api.themoviedb.org',
   changeOrigin: true,
 }));
+
+app.use('/image/', createProxyMiddleware({ 
+  target: 'https://image.tmdb.org/t/p/w500',
+  changeOrigin: true,
+}));
+
 app.listen(PORT);
